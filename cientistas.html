@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal com Fotos de Cientistas</title>
+    <!-- Incluindo Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluindo jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Incluindo Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .modal-image {
+            display: none; /* Esconde a imagem inicialmente */
+            max-width: 150px; /* Tamanho da imagem */
+            margin-top: 10px;
+        }
+        .bg-rectangle {
+    background-color: #b5c8db; /* cor de fundo */
+    width: 400px;
+    padding: 10px; /* espaço interno */
+    border-radius: 15px; /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgb(38, 0, 255); /* sombra para dar um efeito de profundidade */
+  }
+  
+  .bg-rectangle ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .bg-rectangle li {
+    padding: 5px 0;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="Atomo.webp" alt="Logo" width="55px" class="rounded">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="cientistas.html">Cientistas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="terminologias.html">Terminologias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="suporte.html">Suporte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tabela periodica fd.html">Tabela</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav> 
+    <center>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bg-rectangle">
+          <ul>
+            <h3 id="einsteinName" style="cursor: pointer; color: blue;">Albert Einstein</h3>
+            <img id="einsteinPhoto" src="albert-einstein-foto.webp" alt="Albert Einstein" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#einsteinModal">
+            <div class="modal fade" id="einsteinModal" tabindex="-1" role="dialog" aria-labelledby="einsteinModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="einsteinModalLabel">Albert Einstein</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Albert Einstein (1879-1955) foi um físico teórico alemão que desenvolveu a teoria da relatividade, uma das duas principais teorias da física moderna. Sua equação E=mc², que expressa a equivalência entre massa e energia, é uma das mais famosas da ciência. Einstein foi laureado com o Prêmio Nobel de Física em 1921 por suas explicações do efeito fotoelétrico.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <h3 id="curieName" style="cursor: pointer; color: blue;">Marie Curie</h3>
+                    <img id="curiePhoto" src="Marie-Curie-1024x683.webp" alt="Marie Curie" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#curieModal">
+                    <div class="modal fade" id="curieModal" tabindex="-1" role="dialog" aria-labelledby="curieModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="curieModalLabel">Marie Curie</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Marie Curie (1867-1934) foi uma cientista polonesa e naturalizada francesa, pioneira na pesquisa sobre radioatividade...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Charles Darwin -->
+                    <h3 id="darwinName" style="cursor: pointer; color: blue;">Charles Darwin</h3>
+                    <img id="darwinPhoto" src="Charles-Darwin.jpg" alt="Charles Darwin" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#darwinModal">
+                    <div class="modal fade" id="darwinModal" tabindex="-1" role="dialog" aria-labelledby="darwinModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="darwinModalLabel">Charles Darwin</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Charles Darwin (1809-1882) foi um naturalista britânico, famoso por suas contribuições à teoria da evolução por seleção natural...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Galileu Galilei -->
+                    <h3 id="galileuName" style="cursor: pointer; color: blue;">Galileu Galilei</h3>
+                    <img id="galileuPhoto" src="galileu-galilei.webp" alt="Galileu Galilei" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#galileuModal">
+                    <div class="modal fade" id="galileuModal" tabindex="-1" role="dialog" aria-labelledby="galileuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="galileuModalLabel">Galileu Galilei</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Galileu Galilei (1564-1642) foi um matemático, físico e astrônomo italiano. Ele é amplamente considerado o pai da ciência moderna...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Rosalind Franklin -->
+                    <h3 id="franklinName" style="cursor: pointer; color: blue;">Rosalind Franklin</h3>
+                    <img id="franklinPhoto" src="Rosalind_Franklin.jpg" alt="Rosalind Franklin" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#franklinModal">
+                    <div class="modal fade" id="franklinModal" tabindex="-1" role="dialog" aria-labelledby="franklinModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="franklinModalLabel">Rosalind Franklin</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Rosalind Franklin (1920-1958) foi uma química e cristalógrafa britânica cujas imagens de difração de raios X foram cruciais para a descoberta da estrutura do DNA...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Isaac Newton -->
+                    <h3 id="newtonName" style="cursor: pointer; color: blue;">Isaac Newton</h3>
+                    <img id="newtonPhoto" src="isaac_newton.jpg" alt="Isaac Newton" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#newtonModal">
+                    <div class="modal fade" id="newtonModal" tabindex="-1" role="dialog" aria-labelledby="newtonModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="newtonModalLabel">Isaac Newton</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Isaac Newton (1643-1727) foi um matemático e físico inglês, amplamente reconhecido por sua formulação das leis do movimento e da gravitação universal...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="teslaName" style="cursor: pointer; color: blue;">Nikola Tesla</h3>
+                    <img id="teslaPhoto" src="N.Tesla.JPG" alt="Nikola Tesla" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#teslaModal">
+                    <div class="modal fade" id="teslaModal" tabindex="-1" role="dialog" aria-labelledby="teslaModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="teslaModalLabel">Nikola Tesla</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Nikola Tesla (1856-1943) foi um inventor e engenheiro elétrico sérvio-americano, conhecido por suas contribuições ao desenvolvimento do sistema de corrente alternada (AC) para transmissão de eletricidade...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Niels Bohr -->
+                    <h3 id="bohrName" style="cursor: pointer; color: blue;">Niels Bohr</h3>
+                    <img id="bohrPhoto" src="Niels_Bohr.jpg" alt="Niels Bohr" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#bohrModal">
+                    <div class="modal fade" id="bohrModal" tabindex="-1" role="dialog" aria-labelledby="bohrModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="bohrModalLabel">Niels Bohr</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Niels Bohr (1885-1962) foi um físico dinamarquês que fez contribuições fundamentais para a compreensão da estrutura atômica e da mecânica quântica...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Louis Pasteur -->
+                    <h3 id="pasteurName" style="cursor: pointer; color: blue;">Louis Pasteur</h3>
+                    <img id="pasteurPhoto" src="Louis_Pasteur.jpg" alt="Louis Pasteur" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#pasteurModal">
+                    <div class="modal fade" id="pasteurModal" tabindex="-1" role="dialog" aria-labelledby="pasteurModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="pasteurModalLabel">Louis Pasteur</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Louis Pasteur (1822-1895) foi um químico e microbiologista francês que desenvolveu a teoria germinativa das doenças...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Ada Lovelace -->
+                    <h3 id="lovelaceName" style="cursor: pointer; color: blue;">Ada Lovelace</h3>
+                    <img id="lovelacePhoto" src="ada.jpg" alt="Ada Lovelace" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#lovelaceModal">
+                    <div class="modal fade" id="lovelaceModal" tabindex="-1" role="dialog" aria-labelledby="lovelaceModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="lovelaceModalLabel">Ada Lovelace</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Ada Lovelace (1815-1852) foi uma matemática e escritora britânica, conhecida por seu trabalho com Charles Babbage...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- James Clerk Maxwell -->
+                    <h3 id="maxwellName" style="cursor: pointer; color: blue;">James Clerk Maxwell</h3>
+                    <img id="maxwellPhoto" src="james-clark-maxwell.webp" alt="James Clerk Maxwell" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#maxwellModal">
+                    <div class="modal fade" id="maxwellModal" tabindex="-1" role="dialog" aria-labelledby="maxwellModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="maxwellModalLabel">James Clerk Maxwell</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    James Clerk Maxwell (1831-1879) foi um físico escocês conhecido por suas equações que descrevem a interação dos campos elétricos e magnéticos...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="feynmanName" style="cursor: pointer; color: blue;">Richard Feynman</h3>
+                    <img id="feynmanPhoto" src="Richard-Feynman.webp" alt="Richard Feynman" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#feynmanModal">
+                    <div class="modal fade" id="feynmanModal" tabindex="-1" role="dialog" aria-labelledby="feynmanModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="feynmanModalLabel">Richard Feynman</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Richard Feynman (1918-1988) foi um físico teórico americano conhecido por seus trabalhos em mecânica quântica, eletrodinâmica quântica e por seu estilo único de ensino...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Stephen Hawking -->
+                    <h3 id="hawkingName" style="cursor: pointer; color: blue;">Stephen Hawking</h3>
+                    <img id="hawkingPhoto" src="Stephen_Hawking.jpg" alt="Stephen Hawking" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#hawkingModal">
+                    <div class="modal fade" id="hawkingModal" tabindex="-1" role="dialog" aria-labelledby="hawkingModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="hawkingModalLabel">Stephen Hawking</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Stephen Hawking (1942-2018) foi um físico teórico britânico conhecido por seu trabalho em cosmologia e buracos negros...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Leonardo da Vinci -->
+                    <h3 id="daVinciName" style="cursor: pointer; color: blue;">Leonardo da Vinci</h3>
+                    <img id="daVinciPhoto" src="léo da 20tão.jpg" alt="Leonardo da Vinci" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#daVinciModal">
+                    <div class="modal fade" id="daVinciModal" tabindex="-1" role="dialog" aria-labelledby="daVinciModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="daVinciModalLabel">Leonardo da Vinci</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Leonardo da Vinci (1452-1519) foi um polímata italiano do Renascimento, cujas áreas de interesse incluíam a pintura, escultura, arquitetura, ciência, música e engenharia...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </ul>
+        </div>
+    </div>
+        <div class="col-md-3">
+            <div class="bg-rectangle">
+          <ul>
+                <!-- Michael Faraday -->
+        <h3 id="faradayName" style="cursor: pointer; color: blue;">Michael Faraday</h3>
+        <img id="faradayPhoto" src="Faraday-Millikan-Gale-1913.jpg" alt="Michael Faraday" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#faradayModal">
+        <div class="modal fade" id="faradayModal" tabindex="-1" role="dialog" aria-labelledby="faradayModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="faradayModalLabel">Michael Faraday</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Michael Faraday (1791-1867) foi um físico e químico inglês conhecido por suas descobertas no campo do eletromagnetismo e da eletroquímica...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lise Meitner -->
+        <h3 id="meitnerName" style="cursor: pointer; color: blue;">Lise Meitner</h3>
+        <img id="meitnerPhoto" src="Lise-Meitner-45.jpg" alt="Lise Meitner" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#meitnerModal">
+        <div class="modal fade" id="meitnerModal" tabindex="-1" role="dialog" aria-labelledby="meitnerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="meitnerModalLabel">Lise Meitner</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Lise Meitner (1878-1968) foi uma física teórica austríaca que desempenhou um papel crucial na descoberta da fissão nuclear...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="heisenbergName" style="cursor: pointer; color: blue;">Werner Heisenberg</h3>
+        <img src="werner heisenberg.jpg" alt="Werner Heisenberg" id="heisenbergPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#heisenbergModal">
+        <div class="modal fade" id="heisenbergModal" tabindex="-1" role="dialog" aria-labelledby="heisenbergModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="heisenbergModalLabel">Werner Heisenberg</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Werner Heisenberg (1901-1976) foi um físico teórico alemão, conhecido por formular o Princípio da Incerteza, que estabelece limites fundamentais à precisão com que certas pares de propriedades físicas, como posição e momento, podem ser medidas simultaneamente. Este princípio é um pilar da mecânica quântica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claude Shannon -->
+        <h3 id="shannonName" style="cursor: pointer; color: blue;">Claude Shannon</h3>
+        <img src="ClaudeShannon.jpg" alt="Claude Shannon" id="shannonPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#shannonModal">
+        <div class="modal fade" id="shannonModal" tabindex="-1" role="dialog" aria-labelledby="shannonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shannonModalLabel">Claude Shannon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Claude Shannon (1916-2001) foi um matemático e engenheiro elétrico americano, amplamente reconhecido como o pai da teoria da informação. Seus trabalhos fundacionais sobre a quantificação da informação e a codificação de dados são fundamentais para o desenvolvimento das comunicações digitais modernas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- James Watson -->
+        <h3 id="watsonName" style="cursor: pointer; color: blue;">James Watson</h3>
+        <img src="james-d-watson-gettyimages-615316452.jpg" alt="James Watson" id="watsonPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#watsonModal">
+        <div class="modal fade" id="watsonModal" tabindex="-1" role="dialog" aria-labelledby="watsonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="watsonModalLabel">James Watson</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        James Watson (n. 1920) é um biólogo molecular americano, conhecido por sua co-descoberta da estrutura do DNA, junto com Francis Crick. Sua pesquisa foi fundamental para a compreensão da genética e levou ao desenvolvimento da biologia molecular moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Francis Crick -->
+        <h3 id="crickName" style="cursor: pointer; color: blue;">Francis Crick</h3>
+        <img src="Francis_Crick_crop_(cropped).jpg" alt="Francis Crick" id="crickPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#crickModal">
+        <div class="modal fade" id="crickModal" tabindex="-1" role="dialog" aria-labelledby="crickModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crickModalLabel">Francis Crick</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Francis Crick (1916-2004) foi um biólogo molecular inglês, famoso por ter codescoberto a estrutura do DNA com James Watson. A descoberta da dupla hélice do DNA foi um marco na biologia e abriu o caminho para uma nova era na pesquisa genética.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paul Dirac -->
+        <h3 id="diracName" style="cursor: pointer; color: blue;">Paul Dirac</h3>
+        <img src="Paul_Dirac,_1933,_head_and_shoulders_portrait,_bw.jpg" alt="Paul Dirac" id="diracPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#diracModal">
+        <div class="modal fade" id="diracModal" tabindex="-1" role="dialog" aria-labelledby="diracModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="diracModalLabel">Paul Dirac</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Paul Dirac (1902-1984) foi um físico teórico britânico, um dos fundadores da mecânica quântica e da eletrodinâmica quântica. Ele formulou a equação de Dirac, que descreve o comportamento dos elétrons e prevê a existência da antipartícula do elétron, o pósitron.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="planckName" style="cursor: pointer; color: blue;">Max Planck</h3>
+        <img src="Max_Planck_by_Hugo_Erfurth_1938cr.jpg" alt="Max Planck" id="planckPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#planckModal">
+        <div class="modal fade" id="planckModal" tabindex="-1" role="dialog" aria-labelledby="planckModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="planckModalLabel">Max Planck</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Max Planck (1858-1947) foi um físico teórico alemão que fundou a teoria quântica, introduzindo o conceito de quantização da energia. Seu trabalho sobre a radiação do corpo negro levou à formulação da constante de Planck, essencial para a física quântica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- John von Neumann -->
+        <h3 id="neumannName" style="cursor: pointer; color: blue;">John von Neumann</h3>
+        <img src="800px-JohnvonNeumann-LosAlamos.jpg" alt="John von Neumann" id="neumannPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#neumannModal">
+        <div class="modal fade" id="neumannModal" tabindex="-1" role="dialog" aria-labelledby="neumannModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="neumannModalLabel">John von Neumann</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        John von Neumann (1903-1957) foi um matemático e cientista da computação húngaro-americano, cujos trabalhos em teoria dos jogos, computação e física nuclear tiveram um impacto profundo em várias disciplinas. Desenvolveu a arquitetura de von Neumann, a base para os computadores modernos.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Erwin Schrödinger -->
+        <h3 id="schrodingerName" style="cursor: pointer; color: blue;">Erwin Schrödinger</h3>
+        <img src="Erwin_Schrödinger_(1933).jpg" alt="Erwin Schrödinger" id="schrodingerPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#schrodingerModal">
+        <div class="modal fade" id="schrodingerModal" tabindex="-1" role="dialog" aria-labelledby="schrodingerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="schrodingerModalLabel">Erwin Schrödinger</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Erwin Schrödinger (1887-1961) foi um físico teórico austríaco, conhecido por desenvolver a equação de Schrödinger, uma das equações fundamentais da mecânica quântica. Sua contribuição ajudou a entender o comportamento das partículas subatômicas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Henrietta Leavitt -->
+        <h3 id="leavittName" style="cursor: pointer; color: blue;">Henrietta Leavitt</h3>
+        <img src="Henrietta_Swan_Leavitt.jpg" alt="Henrietta Leavitt" id="leavittPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#leavittModal">
+        <div class="modal fade" id="leavittModal" tabindex="-1" role="dialog" aria-labelledby="leavittModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="leavittModalLabel">Henrietta Leavitt</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Henrietta Leavitt (1868-1921) foi uma astrônoma americana cujo trabalho com variáveis cefeidas ajudou a medir as distâncias das galáxias e contribuiu para a compreensão da estrutura do universo. Seu trabalho é fundamental para a astronomia moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alan Turing -->
+        <h3 id="turingName" style="cursor: pointer; color: blue;">Alan Turing</h3>
+        <img src="alan-turing-jpg.webp" alt="Alan Turing" id="turingPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#turingModal">
+        <div class="modal fade" id="turingModal" tabindex="-1" role="dialog" aria-labelledby="turingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="turingModalLabel">Alan Turing</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Alan Turing (1912-1954) foi um matemático e criptógrafo britânico, amplamente considerado um dos pais da ciência da computação e da inteligência artificial. Seu trabalho sobre a máquina de Turing e a decodificação de mensagens criptografadas durante a Segunda Guerra Mundial teve um impacto significativo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="mendelName" style="cursor: pointer; color: blue;">Gregor Mendel</h3>
+        <img src="Gregor_Mendel_Monk.jpg" alt="Gregor Mendel" id="mendelPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#mendelModal">
+        <div class="modal fade" id="mendelModal" tabindex="-1" role="dialog" aria-labelledby="mendelModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mendelModalLabel">Gregor Mendel</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Gregor Mendel (1822-1884) foi um monge e botânico austríaco, conhecido como o pai da genética moderna. Seus experimentos com plantas de ervilha estabeleceram as leis da hereditariedade, que formam a base da genética.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dmitri Mendeleev -->
+        <h3 id="mendeleevName" style="cursor: pointer; color: blue;">Dmitri Mendeleev</h3>
+        <img src="Dmitri-Mendeleiev.jpg" alt="Dmitri Mendeleev" id="mendeleevPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#mendeleevModal">
+        <div class="modal fade" id="mendeleevModal" tabindex="-1" role="dialog" aria-labelledby="mendeleevModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mendeleevModalLabel">Dmitri Mendeleev</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Dmitri Mendeleev (1834-1907) foi um químico russo que desenvolveu a tabela periódica dos elementos. Sua tabela, organizada de acordo com as propriedades químicas e as massas atômicas, permitiu prever a existência e as propriedades de elementos ainda não descobertos.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          </ul>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class="bg-rectangle">
+          <ul>
+                 <!-- Andreas Vesalius -->
+        <h3 id="vesaliusName" style="cursor: pointer; color: blue;">Andreas Vesalius</h3>
+        <img src="Andreas-Vesalius.webp" alt="Andreas Vesalius" id="vesaliusPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#vesaliusModal">
+        <div class="modal fade" id="vesaliusModal" tabindex="-1" role="dialog" aria-labelledby="vesaliusModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vesaliusModalLabel">Andreas Vesalius</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Andreas Vesalius (1514-1564) foi um anatomista e médico belga. É conhecido como o pai da anatomia moderna por suas detalhadas dissecações e descrições do corpo humano, apresentadas em seu trabalho "De humani corporis fabrica".
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- J. Robert Oppenheimer -->
+        <h3 id="oppenheimerName" style="cursor: pointer; color: blue;">J. Robert Oppenheimer</h3>
+        <img src="j-robert-oppenheimer.jpg" alt="J. Robert Oppenheimer" id="oppenheimerPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#oppenheimerModal">
+        <div class="modal fade" id="oppenheimerModal" tabindex="-1" role="dialog" aria-labelledby="oppenheimerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="oppenheimerModalLabel">J. Robert Oppenheimer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        J. Robert Oppenheimer (1904-1967) foi um físico teórico americano e o diretor científico do Projeto Manhattan, o esforço dos EUA para desenvolver a primeira bomba atômica durante a Segunda Guerra Mundial.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- J.J. Thomson -->
+        <h3 id="thomsonName" style="cursor: pointer; color: blue;">J.J. Thomson</h3>
+        <img src="800px-J.J_Thomson.jpg" alt="J.J. Thomson" id="thomsonPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#thomsonModal">
+        <div class="modal fade" id="thomsonModal" tabindex="-1" role="dialog" aria-labelledby="thomsonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="thomsonModalLabel">J.J. Thomson</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        J.J. Thomson (1856-1940) foi um físico britânico, conhecido por sua descoberta do elétron em 1897. Ele desenvolveu o modelo do "pudim de passas" para o átomo, que descrevia o átomo como uma esfera carregada positivamente com elétrons incrustados. Recebeu o Prêmio Nobel de Física em 1906 por suas investigações sobre a condução elétrica em gases.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="elionName" style="cursor: pointer; color: blue;">Gertrude B. Elion</h3>
+        <img src="Gertrude Belle Elion.jpg" alt="Gertrude B. Elion" id="elionPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#elionModal">
+        <div class="modal fade" id="elionModal" tabindex="-1" role="dialog" aria-labelledby="elionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="elionModalLabel">Gertrude B. Elion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Gertrude B. Elion (1918-1999) foi uma bioquímica e farmacologista americana. Ela desenvolveu vários medicamentos importantes, incluindo tratamentos para leucemia e herpes, e ganhou o Prêmio Nobel de Fisiologia ou Medicina em 1988.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- John Snow -->
+        <h3 id="snowName" style="cursor: pointer; color: blue;">John Snow</h3>
+        <img src="John_Snow.jpg" alt="John Snow" id="snowPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#snowModal">
+        <div class="modal fade" id="snowModal" tabindex="-1" role="dialog" aria-labelledby="snowModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="snowModalLabel">John Snow</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        John Snow (1813-1858) foi um médico inglês conhecido como o pai da epidemiologia moderna. Ele é famoso por seu trabalho na identificação da fonte de um surto de cólera em Londres, que revolucionou a compreensão das doenças infecciosas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bárbara McClintock -->
+        <h3 id="mcclintockName" style="cursor: pointer; color: blue;">Bárbara McClintock</h3>
+        <img src="Barbara-McClintock-1947.webp" alt="Bárbara McClintock" id="mcclintockPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#mcclintockModal">
+        <div class="modal fade" id="mcclintockModal" tabindex="-1" role="dialog" aria-labelledby="mcclintockModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mcclintockModalLabel">Bárbara McClintock</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Bárbara McClintock (1902-1992) foi uma geneticista americana e ganhadora do Prêmio Nobel de Fisiologia ou Medicina em 1983 por seu trabalho pioneiro sobre a transposição genética, a mudança de posição de segmentos de DNA dentro de um genoma.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- James Lovelock -->
+        <h3 id="lovelockName" style="cursor: pointer; color: blue;">James Lovelock</h3>
+        <img src="James-Lovelock-for-web.jpg" alt="James Lovelock" id="lovelockPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#lovelockModal">
+        <div class="modal fade" id="lovelockModal" tabindex="-1" role="dialog" aria-labelledby="lovelockModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="lovelockModalLabel">James Lovelock</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        James Lovelock (1919-) é um cientista e ambientalista britânico, conhecido pela formulação da hipótese de Gaia, que sugere que a Terra e seus sistemas biológicos funcionam como um organismo autorregulado.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- George Washington Carver -->
+        <h3 id="carverName" style="cursor: pointer; color: blue;">George Washington Carver</h3>
+        <img src="george washington.jpg" alt="George Washington Carver" id="carverPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#carverModal">
+        <div class="modal fade" id="carverModal" tabindex="-1" role="dialog" aria-labelledby="carverModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carverModalLabel">George Washington Carver</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        George Washington Carver (1864-1943) foi um agrônomo e inventor americano. Ele é famoso por suas pesquisas com amendoins e batatas-doces e suas inovações na agricultura, ajudando a melhorar as práticas agrícolas e a economia do sul dos EUA.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="goddardName" style="cursor: pointer; color: blue;">Robert H. Goddard</h3>
+        <img src="1200px-Dr._Robert_H._Goddard_-_GPN-2002-000131.jpg" alt="Robert H. Goddard" id="goddardPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#goddardModal">
+        <div class="modal fade" id="goddardModal" tabindex="-1" role="dialog" aria-labelledby="goddardModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="goddardModalLabel">Robert H. Goddard</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Robert H. Goddard (1882-1945) foi um físico e engenheiro americano, conhecido como o pai da tecnologia dos foguetes. Seus experimentos pioneiros com foguetes de combustível líquido abriram caminho para a exploração espacial.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Max Born -->
+        <h3 id="bornName" style="cursor: pointer; color: blue;">Max Born</h3>
+        <img src="max_born.jpg" alt="Max Born" id="bornPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#bornModal">
+        <div class="modal fade" id="bornModal" tabindex="-1" role="dialog" aria-labelledby="bornModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bornModalLabel">Max Born</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Max Born (1882-1970) foi um físico teórico alemão, conhecido por seu trabalho em mecânica quântica. Recebeu o Prêmio Nobel de Física em 1954 por sua interpretação probabilística da função de onda.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Murray Gell-Mann -->
+        <h3 id="gellmannName" style="cursor: pointer; color: blue;">Murray Gell-Mann</h3>
+        <img src="gell-mann-13216-content-portrait-mobile-tiny.webp" alt="Murray Gell-Mann" id="gellmannPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#gellmannModal">
+        <div class="modal fade" id="gellmannModal" tabindex="-1" role="dialog" aria-labelledby="gellmannModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gellmannModalLabel">Murray Gell-Mann</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Murray Gell-Mann (1929-2019) foi um físico teórico americano, conhecido por seu trabalho na teoria de quarks e na classificação das partículas subatômicas. Recebeu o Prêmio Nobel de Física em 1969.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Robert Koch -->
+        <h3 id="kochName" style="cursor: pointer; color: blue;">Robert Koch</h3>
+        <img src="Robert_Koch_BeW.jpg" alt="Robert Koch" id="kochPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#kochModal">
+        <div class="modal fade" id="kochModal" tabindex="-1" role="dialog" aria-labelledby="kochModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kochModalLabel">Robert Koch</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Robert Koch (1843-1910) foi um médico e microbiologista alemão, famoso por suas descobertas sobre a tuberculose e o bacilo causador da doença. Recebeu o Prêmio Nobel de Fisiologia ou Medicina em 1905.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- John Dalton -->
+        <h3 id="daltonName" style="cursor: pointer; color: blue;">John Dalton</h3>
+        <img src="Dalton_John_desk.jpg" alt="John Dalton" id="daltonPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#daltonModal">
+        <div class="modal fade" id="daltonModal" tabindex="-1" role="dialog" aria-labelledby="daltonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="daltonModalLabel">John Dalton</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        John Dalton (1766-1844) foi um químico e físico inglês, conhecido por desenvolver a teoria atômica moderna. Seus estudos sobre a lei das proporções constantes e a teoria dos átomos revolucionaram a química.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="noetherName" style="cursor: pointer; color: blue;">Emmy Noether</h3>
+        <img src="Noether.jpg" alt="Emmy Noether" id="noetherPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#noetherModal">
+        <div class="modal fade" id="noetherModal" tabindex="-1" role="dialog" aria-labelledby="noetherModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="noetherModalLabel">Emmy Noether</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Emmy Noether (1882-1935) foi uma matemática alemã, conhecida por suas contribuições fundamentais à álgebra abstrata e à física teórica, incluindo o teorema de Noether, que relaciona simetrias e leis de conservação.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          </ul>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class="bg-rectangle">
+          <ul>
+             <!-- Alice Ball -->
+        <h3 id="ballName" style="cursor: pointer; color: blue;">Alice Ball</h3>
+        <img src="Alice_Augusta_Ball.jpg" alt="Alice Ball" id="ballPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#ballModal">
+        <div class="modal fade" id="ballModal" tabindex="-1" role="dialog" aria-labelledby="ballModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ballModalLabel">Alice Ball</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Alice Ball (1892-1916) foi uma química americana conhecida por desenvolver a "Método de Ball" para tratar a hanseníase (lepra) com sucesso. Seu trabalho revolucionário foi realizado na primeira metade do século XX e ajudou a salvar muitas vidas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+
+        <!-- William Harvey -->
+        <h3 id="harveyName" style="cursor: pointer; color: blue;">William Harvey</h3>
+        <img src="SS-harvey.jpg" alt="William Harvey" id="harveyPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#harveyModal">
+        <div class="modal fade" id="harveyModal" tabindex="-1" role="dialog" aria-labelledby="harveyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="harveyModalLabel">William Harvey</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        William Harvey (1578-1657) foi um médico inglês que descreveu corretamente a circulação sanguínea no corpo humano. Seu trabalho, publicado em 1628, revolucionou a medicina e estabeleceu as bases da fisiologia cardiovascular moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <!-- Carl Linnaeus -->
+        <h3 id="linnaeusName" style="cursor: pointer; color: blue;">Carl Linnaeus</h3>
+        <img src="carl linnaeus.jpg" alt="Carl Linnaeus" id="linnaeusPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#linnaeusModal">
+        <div class="modal fade" id="linnaeusModal" tabindex="-1" role="dialog" aria-labelledby="linnaeusModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="linnaeusModalLabel">Carl Linnaeus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Carl Linnaeus (1707-1778) foi um botânico e zoologista sueco que desenvolveu o sistema de nomenclatura binomial para a classificação de organismos. Seu trabalho sistematizou a taxonomia e é a base da classificação biológica moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <!-- Kurt Gödel -->
+        <h3 id="godelName" style="cursor: pointer; color: blue;">Kurt Gödel</h3>
+        <img src="1925_kurt_gödel.png" alt="Kurt Gödel" id="godelPhoto" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#godelModal">
+        <div class="modal fade" id="godelModal" tabindex="-1" role="dialog" aria-labelledby="godelModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="godelModalLabel">Kurt Gödel</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Kurt Gödel (1906-1978) foi um matemático e lógico austríaco, conhecido por seus Teoremas da Incompletude. Seus teoremas mostraram que em qualquer sistema lógico consistente, há proposições que não podem ser provadas nem refutadas dentro do sistema.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 id="coriName" style="cursor: pointer; color: blue;">Gerty Cori</h3>
+<img id="coriPhoto" src="Gerty_Theresa_Cori.jpg" alt="Gerty Cori" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#coriModal">
+<div class="modal fade" id="coriModal" tabindex="-1" role="dialog" aria-labelledby="coriModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="coriModalLabel">Gerty Cori</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Gerty Cori (1896-1957) foi uma bioquímica americana e a primeira mulher a ganhar o Prêmio Nobel de Fisiologia ou Medicina em 1947. Ela foi reconhecida por suas pesquisas sobre o ciclo de Cori, um importante processo metabólico.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="joliotCurieName" style="cursor: pointer; color: blue;">Irene Joliot-Curie</h3>
+<img id="joliotCuriePhoto" src="Joliot-curie.jpg" alt="Irene Joliot-Curie" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#joliotCurieModal">
+<div class="modal fade" id="joliotCurieModal" tabindex="-1" role="dialog" aria-labelledby="joliotCurieModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="joliotCurieModalLabel">Irene Joliot-Curie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Irene Joliot-Curie (1897-1956) foi uma química francesa e filha de Marie Curie. Ela recebeu o Prêmio Nobel de Química em 1935, compartilhado com seu marido Frédéric Joliot-Curie, por sua descoberta da radioatividade artificial.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="eulerName" style="cursor: pointer; color: blue;">Leonhard Euler</h3>
+<img id="eulerPhoto" src="Euler.jpg" alt="Leonhard Euler" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#eulerModal">
+<div class="modal fade" id="eulerModal" tabindex="-1" role="dialog" aria-labelledby="eulerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eulerModalLabel">Leonhard Euler</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Leonhard Euler (1707-1783) foi um matemático e físico suíço, cujas contribuições fundamentais para a matemática incluem a teoria dos grafos, a fórmula de Euler e a função de Euler. Ele é conhecido por seu trabalho em diversas áreas da matemática e da física.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="lamarrName" style="cursor: pointer; color: blue;">Hedy Lamarr</h3>
+<img id="lamarrPhoto" src="Hedy_Lamarr_in_The_Heavenly_Body_1944.jpg" alt="Hedy Lamarr" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#lamarrModal">
+<div class="modal fade" id="lamarrModal" tabindex="-1" role="dialog" aria-labelledby="lamarrModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="lamarrModalLabel">Hedy Lamarr</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Hedy Lamarr (1914-2000) foi uma atriz e inventora austríaca-americana. Ela co-inventou uma técnica de espectro alargado, que mais tarde foi fundamental para o desenvolvimento da tecnologia de comunicação sem fio, incluindo Wi-Fi e Bluetooth.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="rooseveltName" style="cursor: pointer; color: blue;">Eleanor Roosevelt</h3>
+<img id="rooseveltPhoto" src="640px-Eleanor_Roosevelt_portrait_1933.jpg" alt="Eleanor Roosevelt" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#rooseveltModal">
+<div class="modal fade" id="rooseveltModal" tabindex="-1" role="dialog" aria-labelledby="rooseveltModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rooseveltModalLabel">Eleanor Roosevelt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Eleanor Roosevelt (1884-1962) foi a primeira-dama dos Estados Unidos e uma defensora ativa dos direitos humanos. Ela trabalhou na promoção dos direitos das mulheres e dos direitos civis e desempenhou um papel crucial na criação da Declaração Universal dos Direitos Humanos.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<h3 id="leviMontalciniName" style="cursor: pointer; color: blue;">Rita Levi-Montalcini</h3>
+<img id="leviMontalciniPhoto" src="rita-levi-montalcini-777x1024.jpg" alt="Rita Levi-Montalcini" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#leviMontalciniModal">
+<div class="modal fade" id="leviMontalciniModal" tabindex="-1" role="dialog" aria-labelledby="leviMontalciniModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="leviMontalciniModalLabel">Rita Levi-Montalcini</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Rita Levi-Montalcini (1909-2012) foi uma neurobiologista italiana e laureada com o Prêmio Nobel de Fisiologia ou Medicina em 1986. Ela foi reconhecida por suas descobertas sobre os fatores de crescimento nervoso, fundamentais para a neurociência.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Paul Farmer -->
+<h3 id="farmerName" style="cursor: pointer; color: blue;">Paul Farmer</h3>
+<img id="farmerPhoto" src="Guest Speaker_HKSEE-Paul Farmer.jpg" alt="Paul Farmer" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#farmerModal">
+<div class="modal fade" id="farmerModal" tabindex="-1" role="dialog" aria-labelledby="farmerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="farmerModalLabel">Paul Farmer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Paul Farmer (1959-) é um médico e antropólogo americano conhecido por seu trabalho na medicina global e na saúde pública. Ele é co-fundador da Partners In Health e tem se dedicado a melhorar o acesso à saúde em comunidades carentes ao redor do mundo.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stephen Jay Gould -->
+<h3 id="gouldName" style="cursor: pointer; color: blue;">Stephen Jay Gould</h3>
+<img id="gouldPhoto" src="Stephen_Jay_Gould_2015,_portrait_(unknown_date).jpg" alt="Stephen Jay Gould" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#gouldModal">
+<div class="modal fade" id="gouldModal" tabindex="-1" role="dialog" aria-labelledby="gouldModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gouldModalLabel">Stephen Jay Gould</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Stephen Jay Gould (1941-2002) foi um paleontólogo e biólogo evolutivo americano, conhecido por suas contribuições à teoria da evolução. Ele desenvolveu a teoria do equilíbrio pontuado, que propõe que a evolução ocorre em episódios rápidos seguidos por longos períodos de estabilidade.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nina Jablonski -->
+<h3 id="jablonskiName" style="cursor: pointer; color: blue;">Nina Jablonski</h3>
+<img id="jablonskiPhoto" src="NinaJablonski-grey_500x.webp" alt="Nina Jablonski" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#jablonskiModal">
+<div class="modal fade" id="jablonskiModal" tabindex="-1" role="dialog" aria-labelledby="jablonskiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="jablonskiModalLabel">Nina Jablonski</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Nina Jablonski (1951-) é uma antropóloga e paleontóloga americana, conhecida por suas pesquisas sobre a evolução da cor da pele humana e o impacto da luz solar na saúde. Seu trabalho contribuiu para uma melhor compreensão da diversidade humana e da adaptação evolutiva.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- David Attenborough -->
+<h3 id="attenboroughName" style="cursor: pointer; color: blue;">David Attenborough</h3>
+<img id="attenboroughPhoto" src="david.jpg" alt="David Attenborough" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#attenboroughModal">
+<div class="modal fade" id="attenboroughModal" tabindex="-1" role="dialog" aria-labelledby="attenboroughModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="attenboroughModalLabel">David Attenborough</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                David Attenborough (1926-) é um naturalista e documentarista britânico, amplamente conhecido por suas séries de documentários sobre a natureza, como "Planeta Terra" e "Vida". Ao longo de sua carreira, ele tem promovido a conservação ambiental e educado o público sobre a biodiversidade do planeta.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+          </ul>
+        </div>
+        </div>
+    <div class="container mt-5">
+        
+
+    
+   
+
+      
+    </div>
+    </center>
+
+    <!-- Script jQuery para exibir foto ao passar o mouse e mostrar o modal ao clicar -->
+    <script>
+        $(document).ready(function(){
+            $("#einsteinName").mouseenter(function(){
+            $('#einsteinPhoto').fadeIn(); // Exibe a foto
+        });
+
+        // Quando o mouse sai do nome de Albert Einstein
+            $("#einsteinName").mouseleave(function(){
+            setTimeout(function() {
+                $('#einsteinPhoto').fadeOut(); // Atraso de 1 segundo antes de desaparecer a foto
+            }, 1000); 
+            });
+             // Funcionalidade para exibir as fotos ao passar o mouse
+             $("#curieName").mouseenter(function(){
+                $('#curiePhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#darwinName").mouseenter(function(){
+                $('#darwinPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#galileuName").mouseenter(function(){
+                $('#galileuPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#franklinName").mouseenter(function(){
+                $('#franklinPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#newtonName").mouseenter(function(){
+                $('#newtonPhoto').fadeIn(); // Exibe a foto
+            });
+
+            // Funcionalidade para esconder as fotos após 1 segundo
+            $("#curieName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#curiePhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo antes de esconder a foto
+            });
+
+            $("#darwinName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#darwinPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#galileuName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#galileuPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#franklinName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#franklinPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#newtonName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#newtonPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+            $("#teslaName").mouseenter(function(){
+                $('#teslaPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#bohrName").mouseenter(function(){
+                $('#bohrPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#pasteurName").mouseenter(function(){
+                $('#pasteurPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#lovelaceName").mouseenter(function(){
+                $('#lovelacePhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#maxwellName").mouseenter(function(){
+                $('#maxwellPhoto').fadeIn(); // Exibe a foto
+            });
+
+            // Funcionalidade para esconder as fotos após 1 segundo
+            $("#teslaName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#teslaPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#bohrName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#bohrPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#pasteurName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#pasteurPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#lovelaceName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#lovelacePhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+
+            $("#maxwellName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#maxwellPhoto').fadeOut();
+                }, 1000); // Atraso de 1 segundo
+            });
+            $("#feynmanName").mouseenter(function(){
+                $('#feynmanPhoto').fadeIn(); // Exibe a foto
+            });
+
+            $("#hawkingName").mouseenter(function(){
+                $('#hawkingPhoto').fadeIn();
+            });
+
+            $("#daVinciName").mouseenter(function(){
+                $('#daVinciPhoto').fadeIn();
+            });
+
+            $("#faradayName").mouseenter(function(){
+                $('#faradayPhoto').fadeIn();
+            });
+
+            $("#meitnerName").mouseenter(function(){
+                $('#meitnerPhoto').fadeIn();
+            });
+
+            // Funcionalidade para esconder as fotos após 1 segundo
+            $("#feynmanName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#feynmanPhoto').fadeOut();
+                }, 1000);
+            });
+
+            $("#hawkingName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#hawkingPhoto').fadeOut();
+                }, 1000);
+            });
+
+            $("#daVinciName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#daVinciPhoto').fadeOut();
+                }, 1000);
+            });
+
+            $("#faradayName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#faradayPhoto').fadeOut();
+                }, 1000);
+            });
+
+            $("#meitnerName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#meitnerPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#heisenbergName").mouseenter(function(){
+                $('#heisenbergPhoto').fadeIn();
+            });
+            $("#shannonName").mouseenter(function(){
+                $('#shannonPhoto').fadeIn();
+            });
+            $("#watsonName").mouseenter(function(){
+                $('#watsonPhoto').fadeIn();
+            });
+            $("#crickName").mouseenter(function(){
+                $('#crickPhoto').fadeIn();
+            });
+            $("#diracName").mouseenter(function(){
+                $('#diracPhoto').fadeIn();
+            });
+
+            // Esconder a imagem com atraso de 1 segundo quando o mouse sai
+            $("#heisenbergName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#heisenbergPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#shannonName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#shannonPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#watsonName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#watsonPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#crickName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#crickPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#diracName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#diracPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#planckName").mouseenter(function(){
+                $('#planckPhoto').fadeIn();
+            });
+            $("#neumannName").mouseenter(function(){
+                $('#neumannPhoto').fadeIn();
+            });
+            $("#schrodingerName").mouseenter(function(){
+                $('#schrodingerPhoto').fadeIn();
+            });
+            $("#leavittName").mouseenter(function(){
+                $('#leavittPhoto').fadeIn();
+            });
+            $("#turingName").mouseenter(function(){
+                $('#turingPhoto').fadeIn();
+            });
+
+            // Esconder a imagem com atraso de 1 segundo quando o mouse sai
+            $("#planckName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#planckPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#neumannName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#neumannPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#schrodingerName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#schrodingerPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#leavittName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#leavittPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#turingName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#turingPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#mendelName").mouseenter(function(){
+                $('#mendelPhoto').fadeIn();
+            });
+            $("#mendeleevName").mouseenter(function(){
+                $('#mendeleevPhoto').fadeIn();
+            });
+            $("#vesaliusName").mouseenter(function(){
+                $('#vesaliusPhoto').fadeIn();
+            });
+            $("#oppenheimerName").mouseenter(function(){
+                $('#oppenheimerPhoto').fadeIn();
+            });
+            $("#thomsonName").mouseenter(function(){
+                $('#thomsonPhoto').fadeIn();
+            });
+
+            // Esconder as imagens com um atraso de 1 segundo
+            $("#mendelName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#mendelPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#mendeleevName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#mendeleevPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#vesaliusName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#vesaliusPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#oppenheimerName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#oppenheimerPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#thomsonName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#thomsonPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#elionName").mouseenter(function(){
+                $('#elionPhoto').fadeIn();
+            });
+            $("#snowName").mouseenter(function(){
+                $('#snowPhoto').fadeIn();
+            });
+            $("#mcclintockName").mouseenter(function(){
+                $('#mcclintockPhoto').fadeIn();
+            });
+            $("#lovelockName").mouseenter(function(){
+                $('#lovelockPhoto').fadeIn();
+            });
+            $("#carverName").mouseenter(function(){
+                $('#carverPhoto').fadeIn();
+            });
+
+            // Esconder as imagens com atraso de 1 segundo
+            $("#elionName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#elionPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#snowName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#snowPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#mcclintockName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#mcclintockPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#lovelockName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#lovelockPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#carverName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#carverPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#goddardName").mouseenter(function(){
+                $('#goddardPhoto').fadeIn();
+            });
+            $("#bornName").mouseenter(function(){
+                $('#bornPhoto').fadeIn();
+            });
+            $("#gellmannName").mouseenter(function(){
+                $('#gellmannPhoto').fadeIn();
+            });
+            $("#kochName").mouseenter(function(){
+                $('#kochPhoto').fadeIn();
+            });
+            $("#daltonName").mouseenter(function(){
+                $('#daltonPhoto').fadeIn();
+            });
+
+            // Esconder as imagens com atraso de 1 segundo
+            $("#goddardName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#goddardPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#bornName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#bornPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#gellmannName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#gellmannPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#kochName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#kochPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#daltonName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#daltonPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#noetherName").mouseenter(function(){
+                $('#noetherPhoto').fadeIn();
+            });
+            $("#ballName").mouseenter(function(){
+                $('#ballPhoto').fadeIn();
+            });
+            $("#harveyName").mouseenter(function(){
+                $('#harveyPhoto').fadeIn();
+            });
+            $("#linnaeusName").mouseenter(function(){
+                $('#linnaeusPhoto').fadeIn();
+            });
+            $("#godelName").mouseenter(function(){
+                $('#godelPhoto').fadeIn();
+            });
+
+            // Esconder as imagens com atraso de 1 segundo
+            $("#noetherName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#noetherPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#ballName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#ballPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#harveyName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#harveyPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#linnaeusName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#linnaeusPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#godelName").mouseleave(function(){
+                setTimeout(function() {
+                    $('#godelPhoto').fadeOut();
+                }, 1000);
+            });
+            $("#coriName").mouseenter(function(){
+            $('#coriPhoto').fadeIn();
+        });
+        $("#coriName").mouseleave(function(){
+            setTimeout(function() {
+                $('#coriPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Irene Joliot-Curie
+        $("#joliotCurieName").mouseenter(function(){
+            $('#joliotCuriePhoto').fadeIn();
+        });
+        $("#joliotCurieName").mouseleave(function(){
+            setTimeout(function() {
+                $('#joliotCuriePhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Leonhard Euler
+        $("#eulerName").mouseenter(function(){
+            $('#eulerPhoto').fadeIn();
+        });
+        $("#eulerName").mouseleave(function(){
+            setTimeout(function() {
+                $('#eulerPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Hedy Lamarr
+        $("#lamarrName").mouseenter(function(){
+            $('#lamarrPhoto').fadeIn();
+        });
+        $("#lamarrName").mouseleave(function(){
+            setTimeout(function() {
+                $('#lamarrPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Eleanor Roosevelt
+        $("#rooseveltName").mouseenter(function(){
+            $('#rooseveltPhoto').fadeIn();
+        });
+        $("#rooseveltName").mouseleave(function(){
+            setTimeout(function() {
+                $('#rooseveltPhoto').fadeOut();
+            }, 1000); 
+        });
+        $("#leviMontalciniName").mouseenter(function(){
+            $('#leviMontalciniPhoto').fadeIn();
+        });
+        $("#leviMontalciniName").mouseleave(function(){
+            setTimeout(function() {
+                $('#leviMontalciniPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Paul Farmer
+        $("#farmerName").mouseenter(function(){
+            $('#farmerPhoto').fadeIn();
+        });
+        $("#farmerName").mouseleave(function(){
+            setTimeout(function() {
+                $('#farmerPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Stephen Jay Gould
+        $("#gouldName").mouseenter(function(){
+            $('#gouldPhoto').fadeIn();
+        });
+        $("#gouldName").mouseleave(function(){
+            setTimeout(function() {
+                $('#gouldPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // Nina Jablonski
+        $("#jablonskiName").mouseenter(function(){
+            $('#jablonskiPhoto').fadeIn();
+        });
+        $("#jablonskiName").mouseleave(function(){
+            setTimeout(function() {
+                $('#jablonskiPhoto').fadeOut();
+            }, 1000); 
+        });
+
+        // David Attenborough
+        $("#attenboroughName").mouseenter(function(){
+            $('#attenboroughPhoto').fadeIn();
+        });
+        $("#attenboroughName").mouseleave(function(){
+            setTimeout(function() {
+                $('#attenboroughPhoto').fadeOut();
+            }, 1000); 
+        }); 
+        });
+    </script>
+    </body>
+    </html>

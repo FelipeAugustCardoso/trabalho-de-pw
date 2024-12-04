@@ -1,0 +1,96 @@
+table {
+    border-collapse: collapse;
+    width: 67%;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+td {
+    border: 2px solid #ffffff;
+    width:  10%; 
+    height: 10%; 
+    text-align: center;
+    vertical-align: center;
+    font-size: 32px; 
+}
+.conteudoFixo {
+position: absolute;
+top: 15%;
+left: 9%;
+background-color:#ffffff;
+width: 1500px;
+}
+.empty {
+    background-color: #ffffff;
+}
+.expandir {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+.Metais-alcalinos {
+    background-color: #2dc2c2;
+}
+.Semimetais {
+    background-color: #817610;
+}
+.Metais-alcalinoterrosos {
+    background-color: #b65050;
+}
+.Gases-nobres{
+    background-color: #8f1111;
+}
+.Metais-de-transição {
+    background-color: #a33ab6;
+}
+.Metais-pós-transição {
+    background-color: #355e0e;
+}
+.Ametais-reativos {
+    background-color: #00a2ff;
+}
+.Lantanídeos {
+    background-color: #467dc5;
+}
+.Actinídeos {
+    background-color: #7a5e1f;
+}
+.Propriedades-desconhecidas {
+    background-color: #777777;
+}
+.group-header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+div {
+width: 80px;
+height: 80px;
+}
+
+.scaled {
+transform: scale(0.5, 0.5); /* Igual a scaleX(2) scaleY(0.5) */
+transform-origin: left;
+}
+
+.body{
+background-color: white;
+color: black;
+}
+.titolo{
+   font-family: cursive   ;
+   font-size: 35px;
+   font-style: italic;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   margin-bottom:  20px;
+}
+
+.group-header h3 {
+    margin: 0;
+}
+
+.table-separation {
+    margin-bottom: 40px; /* Espaço entre tabelas */
+}
+

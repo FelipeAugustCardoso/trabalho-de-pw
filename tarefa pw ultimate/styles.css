@@ -1,0 +1,52 @@
+:root {
+    --gradient-text: linear-gradient(
+        #0772ff,
+        #557900
+    );
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+.conteiner{
+    background-color: rgb(95, 0, 95);
+}
+
+div[class="carousel-item"] img {
+    width: 50px;
+    height: 100px;
+}
+
+section[id="search"] h2 {
+    color: transparent;
+    background: var(--gradient-text) no-repeat;
+    background-size: 300%;
+    background-clip: text;
+    transition: all 0.25s;
+}
+
+section[id="search"] h2:focus, section[id="search"] h2:hover {
+    filter: invert(100);
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace, round;
+    font-weight: bold;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#darkModeBtn {
+    transition: all 0.25s;
+}

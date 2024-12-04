@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cientistas</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="átomos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <img src="Atomo.webp" alt="..." width="55px" class="rounded">
+        <a class="navbar-brand" href="index.html">Dicionário Químico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="cientistas.html">Cientistas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="terminologias.html">Terminologias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="suporte.html">Suporte</a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+    <section id="search" class="container mt-5">
+        <h2>Buscar Terminologia</h2>
+        <form>
+            <div class="form-group d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control" placeholder="Digite o termo...">
+                <i class="fa fa-search cursor-pointer"></i>
+            </div>
+        </form>
+    </section>
+
+    <center>
+        <img src="albert-einstein-foto.webp" alt="Albert Einstein" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#einsteinModal">
+        <div class="modal fade" id="einsteinModal" tabindex="-1" role="dialog" aria-labelledby="einsteinModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="einsteinModalLabel">Albert Einstein</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Albert Einstein (1879-1955) foi um físico teórico alemão que desenvolveu a teoria da relatividade, uma das duas principais teorias da física moderna. Sua equação E=mc², que expressa a equivalência entre massa e energia, é uma das mais famosas da ciência. Einstein foi laureado com o Prêmio Nobel de Física em 1921 por suas explicações do efeito fotoelétrico.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Marie-Curie-1024x683.webp" alt="Marie Curie" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#curieModal">
+        <div class="modal fade" id="curieModal" tabindex="-1" role="dialog" aria-labelledby="curieModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="curieModalLabel">Marie Curie</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Marie Curie (1867-1934) foi uma cientista polonesa e naturalizada francesa, pioneira na pesquisa sobre radioatividade. Foi a primeira mulher a ganhar um Prêmio Nobel e a primeira a ganhar dois Prêmios Nobel em diferentes áreas (Física em 1903 e Química em 1911). Seu trabalho foi fundamental para o desenvolvimento da teoria atômica e a luta contra o câncer.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Charles-Darwin.jpg" alt="Charles Darwin" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#darwinModal">
+        <div class="modal fade" id="darwinModal" tabindex="-1" role="dialog" aria-labelledby="darwinModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="darwinModalLabel">Charles Darwin</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Charles Darwin (1809-1882) foi um naturalista britânico, famoso por suas contribuições à teoria da evolução por seleção natural. Sua obra mais conhecida, "A Origem das Espécies" (1859), revolucionou a biologia e mudou a forma como entendemos a origem das espécies e a diversidade da vida.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="galileu-galilei.webp" alt="Galileu Galilei" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#galileuModal">
+        <div class="modal fade" id="galileuModal" tabindex="-1" role="dialog" aria-labelledby="galileuModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="galileuModalLabel">Galileu Galilei</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Galileu Galilei (1564-1642) foi um matemático, físico e astrônomo italiano. Ele é amplamente considerado o pai da ciência moderna devido ao seu uso pioneiro do método científico. Suas melhorias no telescópio e suas observações astronômicas forneceram evidências importantes para a teoria heliocêntrica de Copérnico.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Rosalind_Franklin.jpg" alt="Rosalind Franklin" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#franklinModal">
+        <div class="modal fade" id="franklinModal" tabindex="-1" role="dialog" aria-labelledby="franklinModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="franklinModalLabel">Rosalind Franklin</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Rosalind Franklin (1920-1958) foi uma química e cristalógrafa britânica cujas imagens de difração de raios X foram cruciais para a descoberta da estrutura do DNA. Seu trabalho revelou o padrão de dupla hélice do DNA, uma descoberta fundamental para a biologia molecular.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="isaac_newton.jpg" alt="Isaac Newton" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#newtonModal">
+        <div class="modal fade" id="newtonModal" tabindex="-1" role="dialog" aria-labelledby="newtonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newtonModalLabel">Isaac Newton</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Isaac Newton (1643-1727) foi um matemático e físico inglês, amplamente reconhecido por sua formulação das leis do movimento e da gravitação universal. Seu trabalho "Principia Mathematica" é um dos textos mais influentes na história da ciência, estabelecendo as bases da física clássica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="N.Tesla.JPG" alt="Nikola Tesla" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#teslaModal">
+        <div class="modal fade" id="teslaModal" tabindex="-1" role="dialog" aria-labelledby="teslaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="teslaModalLabel">Nikola Tesla</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Nikola Tesla (1856-1943) foi um inventor e engenheiro elétrico sérvio-americano, conhecido por suas contribuições ao desenvolvimento do sistema de corrente alternada (AC) para transmissão de eletricidade. Seus inventos e ideias revolucionaram a eletricidade e a engenharia eletromagnética.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    <img src="Niels_Bohr.jpg" alt="Niels Bohr" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#bohrModal">
+        <div class="modal fade" id="bohrModal" tabindex="-1" role="dialog" aria-labelledby="bohrModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bohrModalLabel">Niels Bohr</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Niels Bohr (1885-1962) foi um físico dinamarquês que fez contribuições fundamentais para a compreensão da estrutura atômica e da mecânica quântica. Seu modelo atômico, que inclui a quantização dos níveis de energia, foi um avanço crucial na física moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Louis_Pasteur.jpg" alt="Louis Pasteur" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#pasteurModal">
+        <div class="modal fade" id="pasteurModal" tabindex="-1" role="dialog" aria-labelledby="pasteurModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pasteurModalLabel">Louis Pasteur</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Louis Pasteur (1822-1895) foi um químico e microbiologista francês que desenvolveu a teoria germinativa das doenças. Seus trabalhos levaram à criação do processo de pasteurização e ao desenvolvimento de vacinas para várias doenças infecciosas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="ada.jpg" alt="Ada Lovelace" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#lovelaceModal">
+        <div class="modal fade" id="lovelaceModal" tabindex="-1" role="dialog" aria-labelledby="lovelaceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="lovelaceModalLabel">Ada Lovelace</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ada Lovelace (1815-1852) foi uma matemática e escritora britânica, conhecida por seu trabalho com Charles Babbage na máquina analítica. Ela é considerada a primeira programadora de computadores por ter criado um algoritmo para a máquina que precedeu a computação moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="james-clark-maxwell.webp" alt="James Clerk Maxwell" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#maxwellModal">
+        <div class="modal fade" id="maxwellModal" tabindex="-1" role="dialog" aria-labelledby="maxwellModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="maxwellModalLabel">James Clerk Maxwell</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        James Clerk Maxwell (1831-1879) foi um físico escocês conhecido por suas equações que descrevem a interação dos campos elétricos e magnéticos. Seu trabalho sobre as equações de Maxwell é fundamental para a teoria do eletromagnetismo e teve grande impacto na física moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Richard-Feynman.webp" alt="Richard Feynman" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#feynmanModal">
+        <div class="modal fade" id="feynmanModal" tabindex="-1" role="dialog" aria-labelledby="feynmanModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="feynmanModalLabel">Richard Feynman</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Richard Feynman (1918-1988) foi um físico teórico americano conhecido por seus trabalhos em mecânica quântica, eletrodinâmica quântica e por seu estilo único de ensino. Ele foi laureado com o Prêmio Nobel de Física em 1965 e é famoso por suas contribuições à física e suas famosas "Lectures on Physics".
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Stephen_Hawking.jpg" alt="Stephen Hawking" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#hawkingModal">
+        <div class="modal fade" id="hawkingModal" tabindex="-1" role="dialog" aria-labelledby="hawkingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hawkingModalLabel">Stephen Hawking</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Stephen Hawking (1942-2018) foi um físico teórico britânico conhecido por seu trabalho em cosmologia e buracos negros. Seu livro "Uma Breve História do Tempo" tornou a física avançada acessível ao público geral. Ele foi um dos cientistas mais renomados do século XX e sua pesquisa mudou nossa compreensão do universo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="léo da 20tão.jpg" alt="Leonardo da Vinci" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#daVinciModal">
+        <div class="modal fade" id="daVinciModal" tabindex="-1" role="dialog" aria-labelledby="daVinciModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="daVinciModalLabel">Leonardo da Vinci</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Leonardo da Vinci (1452-1519) foi um polímata italiano do Renascimento, cujas áreas de interesse incluíam a pintura, escultura, arquitetura, ciência, música e engenharia. É amplamente considerado um dos maiores gênios da história. Suas obras mais conhecidas incluem "A Mona Lisa" e "A Última Ceia", e suas anotações sobre engenharia e anatomia demonstram sua profundidade de curiosidade e inovação.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <img src="Faraday-Millikan-Gale-1913.jpg" alt="Michael Faraday" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#faradayModal">
+        <div class="modal fade" id="faradayModal" tabindex="-1" role="dialog" aria-labelledby="faradayModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="faradayModalLabel">Michael Faraday</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Michael Faraday (1791-1867) foi um físico e químico inglês conhecido por suas descobertas no campo do eletromagnetismo e da eletroquímica. Suas pesquisas sobre a indução eletromagnética e as leis da eletólise foram fundamentais para o desenvolvimento da tecnologia elétrica moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Lise-Meitner-45.jpg" alt="Lise Meitner" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#meitnerModal">
+        <div class="modal fade" id="meitnerModal" tabindex="-1" role="dialog" aria-labelledby="meitnerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="meitnerModalLabel">Lise Meitner</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Lise Meitner (1878-1968) foi uma física teórica austríaca que desempenhou um papel crucial na descoberta da fissão nuclear. Trabalhou com Otto Hahn e, apesar de não ter recebido o prêmio Nobel, suas contribuições foram essenciais para o desenvolvimento da física nuclear e da energia atômica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="werner heisenberg.jpg" alt="Werner Heisenberg" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#heisenbergModal">
+        <div class="modal fade" id="heisenbergModal" tabindex="-1" role="dialog" aria-labelledby="heisenbergModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="heisenbergModalLabel">Werner Heisenberg</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Werner Heisenberg (1901-1976) foi um físico teórico alemão, conhecido por formular o Princípio da Incerteza, que estabelece limites fundamentais à precisão com que certas pares de propriedades físicas, como posição e momento, podem ser medidas simultaneamente. Este princípio é um pilar da mecânica quântica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="ClaudeShannon.jpg" alt="Claude Shannon" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#shannonModal">
+        <div class="modal fade" id="shannonModal" tabindex="-1" role="dialog" aria-labelledby="shannonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shannonModalLabel">Claude Shannon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Claude Shannon (1916-2001) foi um matemático e engenheiro elétrico americano, amplamente reconhecido como o pai da teoria da informação. Seus trabalhos fundacionais sobre a quantificação da informação e a codificação de dados são fundamentais para o desenvolvimento das comunicações digitais modernas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="james-d-watson-gettyimages-615316452.jpg" alt="James Watson" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#watsonModal">
+        <div class="modal fade" id="watsonModal" tabindex="-1" role="dialog" aria-labelledby="watsonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="watsonModalLabel">James Watson</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        James Watson (n. 1920) é um biólogo molecular americano, conhecido por sua co-descoberta da estrutura do DNA, junto com Francis Crick. Sua pesquisa foi fundamental para a compreensão da genética e levou ao desenvolvimento da biologia molecular moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Francis_Crick_crop_(cropped).jpg" alt="Francis Crick" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#crickModal">
+        <div class="modal fade" id="crickModal" tabindex="-1" role="dialog" aria-labelledby="crickModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crickModalLabel">Francis Crick</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Francis Crick (1916-2004) foi um biólogo molecular inglês, famoso por ter codescoberto a estrutura do DNA com James Watson. A descoberta da dupla hélice do DNA foi um marco na biologia e abriu o caminho para uma nova era na pesquisa genética.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Paul_Dirac,_1933,_head_and_shoulders_portrait,_bw.jpg" alt="Paul Dirac" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#diracModal">
+        <div class="modal fade" id="diracModal" tabindex="-1" role="dialog" aria-labelledby="diracModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="diracModalLabel">Paul Dirac</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Paul Dirac (1902-1984) foi um físico teórico britânico, um dos fundadores da mecânica quântica e da eletrodinâmica quântica. Ele formulou a equação de Dirac, que descreve o comportamento dos elétrons e prevê a existência da antipartícula do elétron, o pósitron.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <img src="Max_Planck_by_Hugo_Erfurth_1938cr.jpg" alt="Max Planck" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#planckModal">
+        <div class="modal fade" id="planckModal" tabindex="-1" role="dialog" aria-labelledby="planckModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="planckModalLabel">Max Planck</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Max Planck (1858-1947) foi um físico teórico alemão que fundou a teoria quântica, introduzindo o conceito de quantização da energia. Seu trabalho sobre a radiação do corpo negro levou à formulação da constante de Planck, essencial para a física quântica.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="800px-JohnvonNeumann-LosAlamos.jpg" alt="John von Neumann" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#neumannModal">
+        <div class="modal fade" id="neumannModal" tabindex="-1" role="dialog" aria-labelledby="neumannModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="neumannModalLabel">John von Neumann</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        John von Neumann (1903-1957) foi um matemático e cientista da computação húngaro-americano, cujos trabalhos em teoria dos jogos, computação e física nuclear tiveram um impacto profundo em várias disciplinas. Desenvolveu a arquitetura de von Neumann, a base para os computadores modernos.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Erwin_Schrödinger_(1933).jpg" alt="Erwin Schrödinger" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#schrodingerModal">
+        <div class="modal fade" id="schrodingerModal" tabindex="-1" role="dialog" aria-labelledby="schrodingerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="schrodingerModalLabel">Erwin Schrödinger</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Erwin Schrödinger (1887-1961) foi um físico teórico austríaco, conhecido por desenvolver a equação de Schrödinger, uma das equações fundamentais da mecânica quântica. Sua contribuição ajudou a entender o comportamento das partículas subatômicas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Henrietta_Swan_Leavitt.jpg" alt="Henrietta Leavitt" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#leavittModal">
+        <div class="modal fade" id="leavittModal" tabindex="-1" role="dialog" aria-labelledby="leavittModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="leavittModalLabel">Henrietta Leavitt</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Henrietta Leavitt (1868-1921) foi uma astrônoma americana cujo trabalho com variáveis cefeidas ajudou a medir as distâncias das galáxias e contribuiu para a compreensão da estrutura do universo. Seu trabalho é fundamental para a astronomia moderna.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="alan-turing-jpg.webp" alt="Alan Turing" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#turingModal">
+        <div class="modal fade" id="turingModal" tabindex="-1" role="dialog" aria-labelledby="turingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="turingModalLabel">Alan Turing</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Alan Turing (1912-1954) foi um matemático e criptógrafo britânico, amplamente considerado um dos pais da ciência da computação e da inteligência artificial. Seu trabalho sobre a máquina de Turing e a decodificação de mensagens criptografadas durante a Segunda Guerra Mundial teve um impacto significativo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Gregor_Mendel_Monk.jpg" alt="Gregor Mendel" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#mendelModal">
+        <div class="modal fade" id="mendelModal" tabindex="-1" role="dialog" aria-labelledby="mendelModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mendelModalLabel">Gregor Mendel</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Gregor Mendel (1822-1884) foi um monge e botânico austríaco, conhecido como o pai da genética moderna. Seus experimentos com plantas de ervilha estabeleceram as leis da hereditariedade, que formam a base da genética.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="Dmitri-Mendeleiev.jpg" alt="Dmitri Mendeleev" class="rounded-circle modal-image" style="width: 150px; height: 150px;" data-toggle="modal" data-target="#mendeleevModal">
+        <div class="modal fade" id="mendeleevModal" tabindex="-1" role="dialog" aria-labelledby="mendeleevModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mendeleevModalLabel">Dmitri Mendeleev</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Dmitri Mendeleev (1834-1907) foi um químico russo que desenvolveu a tabela periódica dos elementos. Sua tabela, organizada de acordo com as propriedades químicas e as massas atômicas, permitiu prever a existência e as propriedades de elementos ainda não descobertos.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </center>
+</body>
+</html>
